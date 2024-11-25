@@ -5,9 +5,10 @@ import com.example.secondrecycleview.data.network.model.CovidData
 class CovidDataApiClient() {
     private lateinit var apiService: CovidDataApiService
 
-    suspend fun getCovidDataById(id: Int): CovidData? {
+    suspend fun getCovidData(): List<CovidData>? {
         return try {
-            apiService.getCovidDataById(id)
+            val data = apiService.getCovidData()
+            data
         } catch (e: Exception) {
             e.printStackTrace()
             null

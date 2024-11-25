@@ -1,12 +1,12 @@
 package com.example.secondrecycleview.data.network
 
+import com.example.secondrecycleview.CovidDataProvider
 import com.example.secondrecycleview.data.network.model.CovidData
-import retrofit2.http.GET
-import retrofit2.http.Path
 
-interface CovidDataApiService {
+class CovidDataApiService {
 
-    @GET("{id}")
-    suspend fun getCovidDataById(@Path("id") id: Int): CovidData
+    // It simulates that we have an Api
+    suspend fun getCovidData(): List<CovidData> {
+        return CovidDataProvider.covidDataList
+    }
 }
-
