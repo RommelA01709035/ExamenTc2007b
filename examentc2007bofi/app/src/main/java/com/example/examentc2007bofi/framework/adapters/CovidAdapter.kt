@@ -1,7 +1,9 @@
 package com.example.secondrecycleview.framework.adapters
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.secondrecycleview.data.network.model.CovidData
 import com.example.secondrecycleview.databinding.ItemCovidDataBinding
@@ -17,6 +19,7 @@ class CovidDataAdapter(private val covidDataList: List<CovidData>, private val a
 
     override fun getItemCount(): Int = covidDataList.size
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: CovidDataViewHolder, position: Int) {
         val item = covidDataList[position]
         holder.render(item)

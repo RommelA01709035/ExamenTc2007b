@@ -21,9 +21,21 @@ class CovidDataViewHolder(private val binding: ItemCovidDataBinding, private val
 
         val totalCases = covidData.cases.values.sumOf { it.total }
         when {
-            totalCases < average * 0.8 -> binding.root.setBackgroundColor(Color.RED)
-            totalCases.toDouble() in (average * 0.8)..(average * 1.2) -> binding.root.setBackgroundColor(Color.YELLOW) // Cerca
-            totalCases > average * 1.2 -> binding.root.setBackgroundColor(Color.GREEN)
+            totalCases < average * 0.8 -> {
+
+                binding.root.setBackgroundColor(Color.parseColor("#4CAF50"))
+                setTextColorForViews(Color.WHITE)
+            }
+            totalCases.toDouble() in (average * 0.8)..(average * 1.2) -> {
+
+                binding.root.setBackgroundColor(Color.parseColor("#FFEB3B"))
+                setTextColorForViews(Color.parseColor("#212121"))
+            }
+            totalCases > average * 1.2 -> {
+
+                binding.root.setBackgroundColor(Color.parseColor("#F44336"))
+                setTextColorForViews(Color.WHITE)
+            }
         }
 
         binding.root.setOnClickListener {
@@ -33,5 +45,10 @@ class CovidDataViewHolder(private val binding: ItemCovidDataBinding, private val
                 Toast.LENGTH_SHORT
             ).show()
         }
+    }
+    private fun setTextColorForViews(color: Int) {
+        binding.tvCovidDataName.setTextColor(color)
+        binding.tvCountry.setTextColor(color)
+        binding.tvNewCases.setTextColor(color)
     }
 }
