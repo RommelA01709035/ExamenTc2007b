@@ -10,27 +10,244 @@ class CovidDataProvider {
                 country = "Canada",
                 region = "Alberta",
                 cases = mapOf(
-                    "2020-01-22" to CaseDetails(total = 0, new = 0),
-                    "2020-01-23" to CaseDetails(total = 0, new = 0),
-                    "2020-01-24" to CaseDetails(total = 0, new = 0),
-                    "2020-01-25" to CaseDetails(total = 0, new = 0),
-                    "2020-01-26" to CaseDetails(total = 0, new = 0)
-
+                    "2020-01-22" to CaseDetails(total = 10, new = 2),
+                    "2020-01-23" to CaseDetails(total = 15, new = 5),
+                    "2020-01-24" to CaseDetails(total = 25, new = 10),
+                    "2020-01-25" to CaseDetails(total = 30, new = 5),
+                    "2020-01-26" to CaseDetails(total = 35, new = 5)
                 )
             ),
             CovidData(
                 country = "Canada",
                 region = "British Columbia",
                 cases = mapOf(
-                    "2020-01-22" to CaseDetails(total = 0, new = 0),
-                    "2020-01-23" to CaseDetails(total = 0, new = 0),
-                    "2020-01-24" to CaseDetails(total = 0, new = 0),
-                    "2020-01-25" to CaseDetails(total = 0, new = 0),
-                    "2020-01-26" to CaseDetails(total = 0, new = 0)
-
+                    "2020-01-22" to CaseDetails(total = 20, new = 10),
+                    "2020-01-23" to CaseDetails(total = 30, new = 10),
+                    "2020-01-24" to CaseDetails(total = 45, new = 15),
+                    "2020-01-25" to CaseDetails(total = 50, new = 5),
+                    "2020-01-26" to CaseDetails(total = 60, new = 10)
+                )
+            ),
+            CovidData(
+                country = "USA",
+                region = "California",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 50, new = 15),
+                    "2020-01-23" to CaseDetails(total = 70, new = 20),
+                    "2020-01-24" to CaseDetails(total = 100, new = 30),
+                    "2020-01-25" to CaseDetails(total = 120, new = 20),
+                    "2020-01-26" to CaseDetails(total = 150, new = 30)
+                )
+            ),
+            CovidData(
+                country = "USA",
+                region = "New York",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 100, new = 50),
+                    "2020-01-23" to CaseDetails(total = 150, new = 50),
+                    "2020-01-24" to CaseDetails(total = 200, new = 50),
+                    "2020-01-25" to CaseDetails(total = 250, new = 50),
+                    "2020-01-26" to CaseDetails(total = 300, new = 50)
+                )
+            ),
+            CovidData(
+                country = "Mexico",
+                region = "Mexico City",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 80, new = 30),
+                    "2020-01-23" to CaseDetails(total = 120, new = 40),
+                    "2020-01-24" to CaseDetails(total = 170, new = 50),
+                    "2020-01-25" to CaseDetails(total = 200, new = 30),
+                    "2020-01-26" to CaseDetails(total = 250, new = 50)
+                )
+            ),
+            CovidData(
+                country = "Mexico",
+                region = "Jalisco",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 10, new = 5),
+                    "2020-01-23" to CaseDetails(total = 20, new = 10),
+                    "2020-01-24" to CaseDetails(total = 30, new = 10),
+                    "2020-01-25" to CaseDetails(total = 40, new = 10),
+                    "2020-01-26" to CaseDetails(total = 50, new = 10)
+                )
+            ),
+            CovidData(
+                country = "Brazil",
+                region = "São Paulo",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 200, new = 50),
+                    "2020-01-23" to CaseDetails(total = 300, new = 100),
+                    "2020-01-24" to CaseDetails(total = 450, new = 150),
+                    "2020-01-25" to CaseDetails(total = 500, new = 50),
+                    "2020-01-26" to CaseDetails(total = 600, new = 100)
+                )
+            ),
+            CovidData(
+                country = "Brazil",
+                region = "Rio de Janeiro",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 150, new = 30),
+                    "2020-01-23" to CaseDetails(total = 180, new = 30),
+                    "2020-01-24" to CaseDetails(total = 220, new = 40),
+                    "2020-01-25" to CaseDetails(total = 250, new = 30),
+                    "2020-01-26" to CaseDetails(total = 300, new = 50)
+                )
+            ),
+            CovidData(
+                country = "UK",
+                region = "London",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 80, new = 10),
+                    "2020-01-23" to CaseDetails(total = 100, new = 20),
+                    "2020-01-24" to CaseDetails(total = 150, new = 50),
+                    "2020-01-25" to CaseDetails(total = 200, new = 50),
+                    "2020-01-26" to CaseDetails(total = 250, new = 50)
+                )
+            ),
+            CovidData(
+                country = "India",
+                region = "Delhi",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 90, new = 30),
+                    "2020-01-23" to CaseDetails(total = 120, new = 30),
+                    "2020-01-24" to CaseDetails(total = 170, new = 50),
+                    "2020-01-25" to CaseDetails(total = 220, new = 50),
+                    "2020-01-26" to CaseDetails(total = 300, new = 80)
+                )
+            ),
+            CovidData(
+                country = "Mexico",
+                region = "Queretaro",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 10, new = 2),
+                    "2020-01-23" to CaseDetails(total = 15, new = 5),
+                    "2020-01-24" to CaseDetails(total = 25, new = 10),
+                    "2020-01-25" to CaseDetails(total = 30, new = 5),
+                    "2020-01-26" to CaseDetails(total = 35, new = 5)
+                )
+            ),
+            CovidData(
+                country = "Alemania",
+                region = "Berlin",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 0, new = 10),
+                    "2020-01-23" to CaseDetails(total = 0, new = 10),
+                    "2020-01-24" to CaseDetails(total = 5, new = 15),
+                    "2020-01-25" to CaseDetails(total = 10, new = 5),
+                    "2020-01-26" to CaseDetails(total = 6, new = 10)
+                )
+            ),
+            CovidData(
+                country = "USA",
+                region = "Los Angeles",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 50, new = 15),
+                    "2020-01-23" to CaseDetails(total = 70, new = 20),
+                    "2020-01-24" to CaseDetails(total = 100, new = 30),
+                    "2020-01-25" to CaseDetails(total = 120, new = 20),
+                    "2020-01-26" to CaseDetails(total = 150, new = 30)
+                )
+            ),
+            CovidData(
+                country = "Japan",
+                region = "Tokyo",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 100, new = 50),
+                    "2020-01-23" to CaseDetails(total = 150, new = 50),
+                    "2020-01-24" to CaseDetails(total = 300, new = 150),
+                    "2020-01-25" to CaseDetails(total = 400, new = 100),
+                    "2020-01-26" to CaseDetails(total = 500, new = 100)
+                )
+            ),
+            CovidData(
+                country = "Australia",
+                region = "New South Wales",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 20, new = 5),
+                    "2020-01-23" to CaseDetails(total = 40, new = 20),
+                    "2020-01-24" to CaseDetails(total = 70, new = 30),
+                    "2020-01-25" to CaseDetails(total = 90, new = 20),
+                    "2020-01-26" to CaseDetails(total = 120, new = 30)
+                )
+            ),
+            CovidData(
+                country = "India",
+                region = "Mumbai",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 150, new = 30),
+                    "2020-01-23" to CaseDetails(total = 200, new = 50),
+                    "2020-01-24" to CaseDetails(total = 300, new = 100),
+                    "2020-01-25" to CaseDetails(total = 400, new = 100),
+                    "2020-01-26" to CaseDetails(total = 500, new = 100)
+                )
+            ),
+            CovidData(
+                country = "South Africa",
+                region = "Cape Town",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 30, new = 10),
+                    "2020-01-23" to CaseDetails(total = 60, new = 30),
+                    "2020-01-24" to CaseDetails(total = 90, new = 30),
+                    "2020-01-25" to CaseDetails(total = 120, new = 30),
+                    "2020-01-26" to CaseDetails(total = 150, new = 30)
+                )
+            ),
+            CovidData(
+                country = "Germany",
+                region = "Munich",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 200, new = 50),
+                    "2020-01-23" to CaseDetails(total = 300, new = 100),
+                    "2020-01-24" to CaseDetails(total = 500, new = 200),
+                    "2020-01-25" to CaseDetails(total = 600, new = 100),
+                    "2020-01-26" to CaseDetails(total = 800, new = 200)
+                )
+            ),
+            CovidData(
+                country = "Brazil",
+                region = "Salvador",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 20, new = 5),
+                    "2020-01-23" to CaseDetails(total = 40, new = 20),
+                    "2020-01-24" to CaseDetails(total = 60, new = 20),
+                    "2020-01-25" to CaseDetails(total = 90, new = 30),
+                    "2020-01-26" to CaseDetails(total = 120, new = 30)
+                )
+            ),
+            CovidData(
+                country = "Russia",
+                region = "Moscow",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 300, new = 100),
+                    "2020-01-23" to CaseDetails(total = 400, new = 100),
+                    "2020-01-24" to CaseDetails(total = 600, new = 200),
+                    "2020-01-25" to CaseDetails(total = 700, new = 100),
+                    "2020-01-26" to CaseDetails(total = 900, new = 200)
+                )
+            ),
+            CovidData(
+                country = "Argentina",
+                region = "Buenos Aires",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 50, new = 20),
+                    "2020-01-23" to CaseDetails(total = 80, new = 30),
+                    "2020-01-24" to CaseDetails(total = 110, new = 30),
+                    "2020-01-25" to CaseDetails(total = 140, new = 30),
+                    "2020-01-26" to CaseDetails(total = 200, new = 60)
+                )
+            ),
+            CovidData(
+                country = "China",
+                region = "Beijing",
+                cases = mapOf(
+                    "2020-01-22" to CaseDetails(total = 500, new = 150),
+                    "2020-01-23" to CaseDetails(total = 700, new = 200),
+                    "2020-01-24" to CaseDetails(total = 900, new = 200),
+                    "2020-01-25" to CaseDetails(total = 1200, new = 300),
+                    "2020-01-26" to CaseDetails(total = 1500, new = 300)
                 )
             )
-
         )
     }
 }

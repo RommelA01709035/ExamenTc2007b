@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#FF0000"
+        android:background="#0080FF"
         android:padding="8dp"
         tools:ignore="MissingConstraints">
 
@@ -47,15 +47,12 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_search" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Buscar"
+                android:text="Take Some Region"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp" />
         </LinearLayout>

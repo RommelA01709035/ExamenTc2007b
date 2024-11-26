@@ -1,31 +1,27 @@
-
 package com.example.secondrecycleview.framework.adapters
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.secondrecycleview.R
 import com.example.secondrecycleview.data.network.model.CovidData
+import com.example.secondrecycleview.databinding.ItemCovidDataBinding
 import com.example.secondrecycleview.framework.adapters.viewholders.CovidDataViewHolder
 
-class CovidDataAdapter :
-    RecyclerView.Adapter<CovidDataViewHolder> {
-    private val CovidDataList: List<CovidData>
-    constructor(CovidDataList: List<CovidData>)
-            : super() {
-        this.CovidDataList = CovidDataList
-    }
+class CovidDataAdapter(private val covidDataList: List<CovidData>, private val average: Double) :
+    RecyclerView.Adapter<CovidDataViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CovidDataViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.item_covid_data, parent, false)
-        return CovidDataViewHolder(view)
+        val binding = ItemCovidDataBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CovidDataViewHolder(binding, average)
     }
 
-    override fun getItemCount(): Int = CovidDataList.size
+    override fun getItemCount(): Int = covidDataList.size
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: CovidDataViewHolder, position: Int) {
-        val item = CovidDataList[position]
+        val item = covidDataList[position]
         holder.render(item)
     }
 }

@@ -11,18 +11,16 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CovidDataViewModel() : ViewModel() {
-    private val repository = CovidDataRepository()
-    private val CovidDataRequirement = CovidDataeRequirement(repository)
+    private val CovidDataRequirement = CovidDataeRequirement()
+    private val _covidDataList = MutableLiveData<List<CovidData>>()
+    val CovidDataList: LiveData<List<CovidData>> get() = _covidDataList
 
-    private val _CovidDataList = MutableLiveData<List<CovidData>>()
-    val CovidDataList: LiveData<List<CovidData>> get() = _CovidDataList
 
-    fun fetchCovidData(limit: Int = 20) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val CovidDataes = (1..limit).mapNotNull { id ->
-                CovidDataRequirement.getCovidDataById(id)
-            }
-            _CovidDataList.postValue(CovidDataes)
+    fun getCovidData() {
+        viewModelScope.launch {
+            val schedule = CovidDataRequirement.invoke()
+            println("ViewModel - Schedule received: $schedule")
+            _covidDataList.postValue(schedule ?: emptyList())
         }
     }
 }
