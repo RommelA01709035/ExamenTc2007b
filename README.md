@@ -1,7 +1,7 @@
-# ExamenTc2007b
+# ExamenTc2007b A01709035 Rommel Pacheco Hernández en Android
 Examen de TC2007b
 
-# Creacion de del proyecto en la plataforma ANdroid android
+# Creacion de del proyecto en la plataforma Android android
  # Realiza un escrito que alinee las etapas de desarrollo de software a la metodología de administración de proyectos ágiles, deberas identificar claramente las etapas con los procesos solicitados por la metodología, el escrito puedes agregarlo a tu README. 
 
 Bueno que yo recuerde si se refiere a los proyectos agiles se refiere a los proyectos con proactividad donde se usa como metodologia de trabajo en scrum (en este semestre usamos la version spotify).
